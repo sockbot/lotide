@@ -28,7 +28,12 @@ const eqObjects = function(object1, object2) {
     for (let key in object1) {
       if (Array.isArray(object1[key])) {
         if (eqArrays(object1[key], object2[key]) === false) {
-          console.log(object2[key]);
+          // console.log(object2[key]);
+          return false;
+        }
+      } else if (typeof object1[key] === 'object') {
+        if (eqObjects(object1[key], object2[key]) === false) {
+          // console.log(object2[key]);
           return false;
         }
       } else if (object1[key] !== object2[key]) {
@@ -89,7 +94,19 @@ const cd2 = {
   d: ["2", 3, 4]
 };
 
-assertEqual(eqObjects(cd, dc), true);
-assertEqual(eqObjects(cd, cd2), false);
+// assertEqual(eqObjects(cd, dc), true);
+// assertEqual(eqObjects(cd, cd2), false);
+// assertEqual(eqArrays(cd.d, cd2.d), false);
 
-assertEqual(eqArrays(cd.d, cd2.d), false);
+// let result1 = eqObjects({ a: { z: {a: 1, b: {c: {a: 1, b: {c: 9}}}} }, b: 2 }, { a: { z: {a: 1, b: {c: {a: 1, b: {c: 9}}}} }, b: 2 }) // => true
+// let result2 = eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) // => false
+// let result3 = eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }) // => false
+// let result4 = eqObjects({ a: { y: 0, z: {a: 1, b: {c: 9}} }, b: 2 }, { a: 1, b: 2 }) // => false
+// let result5 = eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }) // => false
+// console.log(result1);
+// console.log(result2);
+// console.log(result3);
+// console.log(result4);
+// console.log(result5);
+
+// console.log(typeof {});

@@ -20,7 +20,7 @@ const countLetters = function(str) {
   return letterCount;
 };
 
-let sentence = "lighthouse in the house"
+let sentence = "lighthouse in the house";
 let result = countLetters(sentence);
 
 assertEqual(result.l, 1);

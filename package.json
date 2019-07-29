@@ -1,16 +1,10 @@
 {
-  "name": "lotide",
+  "name": "@sockbot/lotide",
   "version": "1.0.0",
-  "description": "<<<<<<< HEAD # lighthouse-lotide ======= # lotide >>>>>>> 1117c193ffdbf471ff8745ecdfa2259ede526149",
+  "description": "A mini clone of the Lodash library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
-  },
-  "dependencies": {
-    "chai": "^4.2.0"
-  },
-  "devDependencies": {
-    "mocha": "^6.2.0"
   },
   "scripts": {
     "test": "mocha"
@@ -19,10 +13,14 @@
     "type": "git",
     "url": "git+https://github.com/sockbot/lotide.git"
   },
-  "author": "",
+  "author": "Andrew Chan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sockbot/lotide/issues"
   },
-  "homepage": "https://github.com/sockbot/lotide#readme"
+  "homepage": "https://github.com/sockbot/lotide#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
 }

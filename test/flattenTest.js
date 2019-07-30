@@ -1,5 +1,4 @@
 const flatten = require('../flatten.js');
-// const assertArraysEqual = require('../assertArraysEqual')
 const assert = require('chai').assert;
 
 describe('#flatten', () => {

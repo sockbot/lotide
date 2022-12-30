@@ -21,6 +21,6 @@
   "homepage": "https://github.com/sockbot/lotide#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "mocha": "^10.2.0"
   }
 }
